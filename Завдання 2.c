@@ -25,6 +25,7 @@ choice:
 
 code:
 {
+
     int a[3][4];
     int count = 0;
     int c[3 * 4];
@@ -38,7 +39,7 @@ code:
         for (int j = 0; j < 4; j++)
         {
             a[i][j] = rand() % 201 - 100;
-            printf("%d ", a[i][j]);
+            printf("\033[1;32m%d ", a[i][j]);
 
             int u = 1;
             for (int n = 0; n < k; n++)
@@ -55,7 +56,7 @@ code:
                 count++;
             }
         }
-        printf("\n");
+        printf("\033[0m\n");
     }
 
     printf("Кількість різних елементів: %d\n", count);
